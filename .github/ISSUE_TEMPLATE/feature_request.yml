@@ -1,0 +1,35 @@
+name: Feature request
+description: Propose a change to coalescing, caching, replacement or shutdown behaviour.
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What your refresh loop cannot express today, with the caller order that needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you propose
+      description: The method, argument, or behaviour you want. Name the caller that needs it.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you tried instead
+      description: An external lock, a cache, or nothing.
+    validations:
+      required: false
+  - type: dropdown
+    id: breaks
+    attributes:
+      label: Does this change the publishing or replacement rule?
+      options:
+        - "No"
+        - "Yes, and I explain why in the proposal"
+        - "I am not sure"
+    validations:
+      required: true

@@ -1,0 +1,10 @@
+{
+  "schema": "resource-singleflight-bench/1",
+  "date": "2026-11-19",
+  "host": "macOS arm64 (Apple M5 Pro)",
+  "python": "3.12.8",
+  "concurrent_callers": 50,
+  "work_calls_for_50_callers": 1,
+  "coalesce_elapsed_ms": 4.6,
+  "cached_submit_us": 3.3
+}

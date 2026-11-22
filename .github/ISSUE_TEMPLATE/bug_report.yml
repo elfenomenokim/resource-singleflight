@@ -1,0 +1,43 @@
+name: Bug report
+description: A caller hung, received a stale value, or a worker outlived its coordinator.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: For a security problem, do not use this form. Use the Security tab advisory instead.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `pip show resource-singleflight`, or the commit you ran.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      placeholder: macOS 26 arm64, Python 3.12.8
+    validations:
+      required: true
+  - type: textarea
+    id: script
+    attributes:
+      label: Reproduction script
+      description: The submission order, the force/invalidate calls, and how the work function blocks.
+      render: python
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual
+      description: What each caller received, and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: traceback
+    attributes:
+      label: Traceback
+      render: shell
+    validations:
+      required: false
